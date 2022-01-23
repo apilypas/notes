@@ -494,5 +494,17 @@ console.log(toy.name);
 Overriding constructors:
 
 ```ts
+class Toy {
+  constructor(public name: string) {}
+}
 
+class DuckToy extends Toy {
+  constructor() {
+    super("Duck");
+  }
+}
+
+const toy = new DuckToy();
+
+console.log(toy.name);
 ```
